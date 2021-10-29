@@ -1,27 +1,23 @@
 {
-  "name": "WGS_create_20unrelated",
-  "title": "WGS create 20 unrelated v25",
-  "version": "v25",
-  "uuid": "0c61d21e-003e-4845-ab57-932a307bf531",
+  "name": "WGS_upstream_gatk",
+  "title": "WGS Upstream GATK VERSION",
+  "version": "VERSION",
+  "accession": "GAPMWFL4LM6A",
+  "description": "WGS upstream pipeline (paired-fastqs to bam) using GATK for trio or family",
+  "uuid": "",
   "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
   "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
-  "previous_version": ["00e919c4-99f8-45a1-b9a8-da1d758ee515"],
-  "version_upgrade_log": "new parallel ApplyBQSR",
   "input": [
     {
-      "argument_name": "fastqs_R1",
+      "argument_name": "fastqs_proband_first_R1",
       "argument_type": "file"
     },
     {
-      "argument_name": "fastqs_R2",
+      "argument_name": "fastqs_proband_first_R2",
       "argument_type": "file"
     },
     {
-      "argument_name": "sample_names",
-      "argument_type": "parameter"
-    },
-    {
-      "argument_name": "rcktar_content_file_names",
+      "argument_name": "sample_names_proband_first",
       "argument_type": "parameter"
     },
     {
@@ -43,54 +39,9 @@
       "argument_name": "known-sites-snp",
       "argument_type": "file",
       "files": [{"file": "8ed35691-0af4-467a-adbc-81eb088549f0"}]
-    },
-    {
-      "argument_name": "regions",
-      "argument_type": "file",
-      "files": [{"file": "1c07a3aa-e2a3-498c-b838-15991c4a2f28"}]
     }
   ],
   "workflows": [
-    {
-      "name": "fastqc-r1",
-      "workflow": "49e96b51-ed6c-4418-a693-d0e9f79adfa5",
-      "config": {
-        "instance_type": "t3.small",
-        "ebs_size": "1.1x",
-        "EBS_optimized": true,
-        "spot_instance": false,
-        "run_name": "run_fastqc-r1",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_fastq",
-          "argument_type": "file",
-          "scatter": 2,
-          "source_argument_name": "fastqs_R1"
-        }
-      ]
-    },
-    {
-      "name": "fastqc-r2",
-      "workflow": "49e96b51-ed6c-4418-a693-d0e9f79adfa5",
-      "config": {
-        "instance_type": "t3.small",
-        "ebs_size": "1.1x",
-        "EBS_optimized": true,
-        "spot_instance": false,
-        "run_name": "run_fastqc-r2",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_fastq",
-          "argument_type": "file",
-          "scatter": 2,
-          "source_argument_name": "fastqs_R2"
-        }
-      ]
-    },
     {
       "name": "workflow_bwa-mem_no_unzip-check",
       "workflow": "aa490a0f-e6a7-4b97-9c91-4e15b5896423",
@@ -113,13 +64,13 @@
           "argument_name": "fastq_R1",
           "argument_type": "file",
           "scatter": 2,
-          "source_argument_name": "fastqs_R1"
+          "source_argument_name": "fastqs_proband_first_R1"
         },
         {
           "argument_name": "fastq_R2",
           "argument_type": "file",
           "scatter": 2,
-          "source_argument_name": "fastqs_R2"
+          "source_argument_name": "fastqs_proband_first_R2"
         },
         {
           "argument_name": "reference",
@@ -149,7 +100,7 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names",
+          "source_argument_name": "sample_names_proband_first",
           "scatter": 1
         }
       ]
@@ -181,7 +132,7 @@
         {
           "argument_name": "sample_name",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names",
+          "source_argument_name": "sample_names_proband_first",
           "scatter": 1
         }
       ]
@@ -207,7 +158,7 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names",
+          "source_argument_name": "sample_names_proband_first",
           "scatter": 1
         }
       ]
@@ -260,7 +211,7 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names",
+          "source_argument_name": "sample_names_proband_first",
           "scatter": 1
         }
       ]
@@ -312,7 +263,7 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names",
+          "source_argument_name": "sample_names_proband_first",
           "scatter": 1
         }
       ]
@@ -364,7 +315,7 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names",
+          "source_argument_name": "sample_names_proband_first",
           "scatter": 1
         }
       ]
@@ -472,77 +423,8 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names",
+          "source_argument_name": "sample_names_proband_first",
           "scatter": 1
-        }
-      ]
-    },
-    {
-      "name": "workflow_granite-mpileupCounts",
-      "workflow": "620671e7-b21a-4c48-aa90-b5beb3283d64",
-      "config": {
-        "instance_type": "c5.4xlarge",
-        "ebs_size": "4x",
-        "EBS_optimized": true,
-        "spot_instance": false,
-        "run_name": "run_workflow_granite-mpileupCounts",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "custom_pf_fields": {
-          "rck": {
-              "file_type": "read counts (rck)",
-              "description": "read counts (rck) file"
-          }
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_gatk-ApplyBQSR-check",
-          "source_argument_name": "recalibrated_bam"
-        },
-        {
-          "argument_name": "reference",
-          "argument_type": "file",
-          "source_argument_name": "reference_fa"
-        },
-        {
-          "argument_name": "regions",
-          "argument_type": "file"
-        },
-        {
-          "argument_name": "nthreads",
-          "argument_type": "parameter",
-          "value": "15",
-          "value_type": "integer"
-        }
-      ]
-    },
-    {
-      "name": "workflow_granite-rckTar",
-      "workflow": "43200ef2-a5da-4216-a736-4d4eac4449d0",
-      "config": {
-        "instance_type": "c5.xlarge",
-        "ebs_size": "2.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_workflow_granite-rckTar",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "custom_pf_fields": {
-          "rck_tar": {
-              "file_type": "tarred read counts (rck)",
-              "description": "tarred read counts (rck) file"
-          }
-      },
-      "input": [
-        {
-          "argument_name": "input_rcks",
-          "argument_type": "file",
-          "gather": 1,
-          "rename": "formula:rcktar_content_file_names",
-          "source": "workflow_granite-mpileupCounts",
-          "source_argument_name": "rck"
         }
       ]
     }
