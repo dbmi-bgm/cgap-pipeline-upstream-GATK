@@ -48,6 +48,7 @@
   "institution": "INSTITUTION_UUID",
   "name": "workflow_add-readgroups-check_VERSION",
   "aliases": ["cgap:workflow_add-readgroups-check_VERSION",
+              "cgap:workflow_add-readgroups-check_v26",
               "cgap:workflow_add-readgroups-check_v25",
               "cgap:workflow_add-readgroups-check_v24",
               "cgap:workflow_add-readgroups-check_v23",

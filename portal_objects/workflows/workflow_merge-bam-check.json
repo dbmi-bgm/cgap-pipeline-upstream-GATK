@@ -36,6 +36,7 @@
   "institution": "INSTITUTION_UUID",
   "name": "workflow_merge-bam-check_VERSION",
   "aliases": ["cgap:workflow_merge-bam-check_VERSION",
+              "cgap:workflow_merge-bam-check_v26",
               "cgap:workflow_merge-bam-check_v25",
               "cgap:workflow_merge-bam-check_v24",
               "cgap:workflow_merge-bam-check_v23",

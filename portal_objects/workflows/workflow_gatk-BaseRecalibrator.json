@@ -41,6 +41,7 @@
   "institution": "INSTITUTION_UUID",
   "name": "workflow_gatk-BaseRecalibrator_VERSION",
   "aliases": ["cgap:workflow_gatk-BaseRecalibrator_VERSION",
+              "cgap:workflow_gatk-BaseRecalibrator_v26",
               "cgap:workflow_gatk-BaseRecalibrator_v25",
               "cgap:workflow_gatk-BaseRecalibrator_v24",
               "cgap:workflow_gatk-BaseRecalibrator_v23",

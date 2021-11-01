@@ -43,6 +43,7 @@
   "institution": "INSTITUTION_UUID",
   "name": "bamqc_VERSION",
   "aliases": ["cgap:bamqc_VERSION",
+              "cgap:bamqc_v26",
               "cgap:bamqc_v25",
               "cgap:bamqc_v24",
               "cgap:bamqc_v23",

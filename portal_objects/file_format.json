@@ -2,7 +2,7 @@
     {
         "status": "shared",
         "project": "PROJECT_UUID",
-        "description": "This format is used for aligned reads",
+        "description": "plain text format",
         "file_format": "txt",
         "institution": "INSTITUTION_UUID",
         "date_created": "2019-08-27T03:45:40.635467+00:00",
@@ -16,7 +16,7 @@
     {
         "file_format": "tsv_gz_tbi",
         "standard_file_extension": "tsv.gz.tbi",
-        "description": "Tabix index file of tab-separate values (tsv), compressed",
+        "description": "tabix index file of tab-separate values (tsv), compressed",
         "uuid": "829ed303-e427-4d9a-a217-be75ad11317e",
         "project": "PROJECT_UUID",
         "institution": "INSTITUTION_UUID",
@@ -39,7 +39,7 @@
     {
         "file_format": "ann",
         "standard_file_extension": "ann",
-        "description": "An extra file of a bwt file",
+        "description": "extra file of a bwt file",
         "uuid": "106199e5-5a85-4817-9a55-7b31698e1fda",
         "project": "PROJECT_UUID",
         "institution": "INSTITUTION_UUID",
@@ -49,7 +49,7 @@
     {
         "file_format": "amb",
         "standard_file_extension": "amb",
-        "description": "An extra file of a bwt file",
+        "description": "extra file of a bwt file",
         "uuid": "8db70ed6-0121-4fe1-a72e-d91dc5aa6cd3",
         "project": "PROJECT_UUID",
         "institution": "INSTITUTION_UUID",
@@ -59,7 +59,7 @@
     {
         "file_format": "pac",
         "standard_file_extension": "pac",
-        "description": "An extra file of a bwt file",
+        "description": "extra file of a bwt file",
         "uuid": "7373ca48-0b3e-467b-967a-80870846f89b",
         "project": "PROJECT_UUID",
         "institution": "INSTITUTION_UUID",
@@ -69,7 +69,7 @@
     {
         "file_format": "sa",
         "standard_file_extension": "sa",
-        "description": "An extra file of a bwt file",
+        "description": "extra file of a bwt file",
         "uuid": "11f2fc36-9a65-4d60-9365-d8ff241df4f7",
         "project": "PROJECT_UUID",
         "institution": "INSTITUTION_UUID",
@@ -79,7 +79,7 @@
     {
         "file_format": "alt",
         "standard_file_extension": "alt",
-        "description": "An extra file of a bwt file",
+        "description": "extra file of a bwt file",
         "uuid": "9ed3e9f9-fee2-47e3-bbe3-c63a52f8d3b8",
         "project": "PROJECT_UUID",
         "institution": "INSTITUTION_UUID",
@@ -163,7 +163,7 @@
     {
         "file_format": "vcf_gz_tbi",
         "standard_file_extension": "vcf.gz.tbi",
-        "description": "Tabix index file of vcf, compressed",
+        "description": "tabix index file of vcf, compressed",
         "uuid": "f84f1922-7f4e-4afc-922f-bec620969bf1",
         "project": "PROJECT_UUID",
         "institution": "INSTITUTION_UUID",
@@ -186,7 +186,7 @@
     {
         "file_format": "bai",
         "standard_file_extension": "bam.bai",
-        "description": "Bam index format",
+        "description": "bam index format",
         "uuid": "d13d06c1-218e-4f61-aaf0-91f226248b3c",
         "project": "PROJECT_UUID",
         "institution": "INSTITUTION_UUID",
@@ -196,7 +196,7 @@
     {
         "file_format": "bam",
         "standard_file_extension": "bam",
-        "description": "This format is used for aligned reads",
+        "description": "this format is used for aligned reads",
         "uuid": "d13d06cf-218e-4f61-aaf0-91f226248b3c",
         "extrafile_formats": [
             "d13d06c1-218e-4f61-aaf0-91f226248b3c"
@@ -210,7 +210,7 @@
         "file_format": "fastq",
         "standard_file_extension": "fastq.gz",
         "other_allowed_extensions": ["fq.gz"],
-        "description": "This format is used for short read sequence data - more information can be found here https://www.ncbi.nlm.nih.gov/sra/docs/submitformats/#fastq-files",
+        "description": "this format is used for short read sequence data - more information can be found here https://www.ncbi.nlm.nih.gov/sra/docs/submitformats/#fastq-files",
         "uuid": "c13d06cf-218e-4f61-aaf0-91f226248b2c",
         "project": "PROJECT_UUID",
         "institution": "INSTITUTION_UUID",

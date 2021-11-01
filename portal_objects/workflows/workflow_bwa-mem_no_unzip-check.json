@@ -68,6 +68,7 @@
   "institution": "INSTITUTION_UUID",
   "name": "workflow_bwa-mem_no_unzip-check_VERSION",
   "aliases": ["cgap:workflow_bwa-mem_no_unzip-check_VERSION",
+              "cgap:workflow_bwa-mem_no_unzip-check_v26",
               "cgap:workflow_bwa-mem_no_unzip-check_v25",
               "cgap:workflow_bwa-mem_no_unzip-check_v24"],
   "steps": [

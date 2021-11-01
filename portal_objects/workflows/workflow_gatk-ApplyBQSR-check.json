@@ -67,6 +67,7 @@
   "institution": "INSTITUTION_UUID",
   "name": "workflow_gatk-ApplyBQSR-check_VERSION",
   "aliases": ["cgap:workflow_gatk-ApplyBQSR-check_VERSION",
+              "cgap:workflow_gatk-ApplyBQSR-check_v26",
               "cgap:workflow_gatk-ApplyBQSR-check_v25"],
   "steps": [
       {
