@@ -1,10 +1,10 @@
 {
-  "name": "WES_upstream_gatk_proband",
-  "title": "WES Upstream GATK Proband VERSION",
+  "name": "WGS_upstream_gatk_proband",
+  "title": "WGS Upstream GATK Proband VERSION",
   "version": "VERSION",
-  "accession": "GAPMWKXZ241C",
-  "description": "WES upstream pipeline (paired-fastqs to bam) using GATK for proband only",
-  "uuid": "d396ffd8-dc41-4e9d-9cce-cb90e45bb9a7",
+  "accession": "GAPMWF34LVZP",
+  "description": "WGS upstream pipeline (paired-fastqs to bam) using GATK for proband only",
+  "uuid": "2b074171-10b5-4f16-be26-8772ad15bac6",
   "project": "PROJECT_UUID",
   "institution": "INSTITUTION_UUID",
   "input": [
@@ -19,12 +19,6 @@
     {
       "argument_name": "sample_names",
       "argument_type": "parameter"
-    },
-    {
-      "argument_name": "eff_genome_size",
-      "argument_type": "parameter",
-      "value": "62847115",
-      "value_type": "integer"
     },
     {
       "argument_name": "reference_bwa",
@@ -89,7 +83,7 @@
       "name": "cgap-bamqc",
       "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
       "config": {
-        "instance_type": "c5a.2xlarge",
+        "instance_type": "r4.2xlarge",
         "ebs_size": "3.5x",
         "EBS_optimized": true,
         "spot_instance": true,
@@ -104,11 +98,6 @@
           "source_argument_name": "raw_bam"
         },
         {
-          "argument_name": "eff_genome_size",
-          "argument_type": "parameter",
-          "source_argument_name": "eff_genome_size"
-        },
-        {
           "argument_name": "sample",
           "argument_type": "parameter",
           "source_argument_name": "sample_names",
@@ -120,7 +109,7 @@
       "name": "workflow_add-readgroups-check",
       "workflow": "d554d59b-e709-4c35-a81f-68a0cb3dd38a",
       "config": {
-        "instance_type": "c5a.2xlarge",
+        "instance_type": "c5.2xlarge",
         "ebs_size": "3.5x",
         "EBS_optimized": true,
         "spot_instance": true,
@@ -152,7 +141,7 @@
       "name": "cgap-bamqc-1",
       "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
       "config": {
-        "instance_type": "c5a.2xlarge",
+        "instance_type": "r4.2xlarge",
         "ebs_size": "3.5x",
         "EBS_optimized": true,
         "spot_instance": true,
@@ -167,11 +156,6 @@
           "source_argument_name": "bam_w_readgroups"
         },
         {
-          "argument_name": "eff_genome_size",
-          "argument_type": "parameter",
-          "source_argument_name": "eff_genome_size"
-        },
-        {
           "argument_name": "sample",
           "argument_type": "parameter",
           "source_argument_name": "sample_names",
@@ -183,7 +167,7 @@
       "name": "workflow_merge-bam-check",
       "workflow": "4853a03a-8c0c-4624-a45d-c5206a72907b",
       "config": {
-        "instance_type": "c5a.2xlarge",
+        "instance_type": "c5.2xlarge",
         "ebs_size": "3x",
         "EBS_optimized": true,
         "spot_instance": true,
@@ -210,7 +194,7 @@
       "name": "cgap-bamqc-2",
       "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
       "config": {
-        "instance_type": "c5a.2xlarge",
+        "instance_type": "r4.2xlarge",
         "ebs_size": "3.5x",
         "EBS_optimized": true,
         "spot_instance": true,
@@ -223,11 +207,6 @@
           "argument_type": "file",
           "source": "workflow_merge-bam-check",
           "source_argument_name": "merged_bam"
-        },
-        {
-          "argument_name": "eff_genome_size",
-          "argument_type": "parameter",
-          "source_argument_name": "eff_genome_size"
         },
         {
           "argument_name": "sample",
@@ -267,7 +246,7 @@
       "name": "cgap-bamqc-3",
       "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
       "config": {
-        "instance_type": "c5a.2xlarge",
+        "instance_type": "r4.2xlarge",
         "ebs_size": "3.5x",
         "EBS_optimized": true,
         "spot_instance": true,
@@ -280,11 +259,6 @@
           "argument_type": "file",
           "source": "workflow_picard-MarkDuplicates-check",
           "source_argument_name": "dupmarked_bam"
-        },
-        {
-          "argument_name": "eff_genome_size",
-          "argument_type": "parameter",
-          "source_argument_name": "eff_genome_size"
         },
         {
           "argument_name": "sample",
@@ -324,7 +298,7 @@
       "name": "cgap-bamqc-4",
       "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
       "config": {
-        "instance_type": "c5a.2xlarge",
+        "instance_type": "r4.2xlarge",
         "ebs_size": "3.5x",
         "EBS_optimized": true,
         "spot_instance": true,
@@ -337,11 +311,6 @@
           "argument_type": "file",
           "source": "workflow_sort-bam-check",
           "source_argument_name": "sorted_bam"
-        },
-        {
-          "argument_name": "eff_genome_size",
-          "argument_type": "parameter",
-          "source_argument_name": "eff_genome_size"
         },
         {
           "argument_name": "sample",
@@ -437,7 +406,7 @@
       "name": "cgap-bamqc-5",
       "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
       "config": {
-        "instance_type": "c5a.2xlarge",
+        "instance_type": "r4.2xlarge",
         "ebs_size": "3.5x",
         "EBS_optimized": true,
         "spot_instance": true,
@@ -450,11 +419,6 @@
           "argument_type": "file",
           "source": "workflow_gatk-ApplyBQSR-check",
           "source_argument_name": "recalibrated_bam"
-        },
-        {
-          "argument_name": "eff_genome_size",
-          "argument_type": "parameter",
-          "source_argument_name": "eff_genome_size"
         },
         {
           "argument_name": "sample",

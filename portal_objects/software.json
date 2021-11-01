@@ -1,7 +1,7 @@
 [
     {
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
         "name": "bwa",
         "software_type": [
             "aligner"
@@ -11,8 +11,8 @@
         "version": "0.7.17"
     },
     {
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
         "name": "samtools",
         "software_type": [
             "file format converter"
@@ -23,8 +23,8 @@
         "version": "1.9"
     },
     {
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
         "name": "gatk",
         "software_type": [
             "variant caller"
@@ -35,8 +35,8 @@
         "version": "4.1.2.0"
     },
     {
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
         "name": "picard",
         "software_type": [
             "filter"
@@ -47,8 +47,8 @@
         "version": "2.20.2"
     },
     {
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
         "name": "add-readgroups",
         "software_type": [
             "annotator"
@@ -59,8 +59,8 @@
         "commit": "28520db"
     },
     {
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
         "name": "pigz",
         "software_type": [
             "compressor"
@@ -71,8 +71,8 @@
         "version": "2.6"
     },
     {
-        "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-        "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+        "project": "PROJECT_UUID",
+        "institution": "INSTITUTION_UUID",
         "name": "split_bam",
         "software_type": [
             "file format converter"

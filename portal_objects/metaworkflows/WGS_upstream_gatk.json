@@ -2,11 +2,11 @@
   "name": "WGS_upstream_gatk",
   "title": "WGS Upstream GATK VERSION",
   "version": "VERSION",
-  "accession": "GAPMWFL4LM6A",
+  "accession": "GAPMWFL92P6A",
   "description": "WGS upstream pipeline (paired-fastqs to bam) using GATK for trio or family",
-  "uuid": "",
-  "project": "12a92962-8265-4fc0-b2f8-cf14f05db58b",
-  "institution": "828cd4fe-ebb0-4b36-a94a-d2e3a36cc989",
+  "uuid": "509b7c7c-b0a1-456f-9901-94a6e5a3a869",
+  "project": "PROJECT_UUID",
+  "institution": "INSTITUTION_UUID",
   "input": [
     {
       "argument_name": "fastqs_proband_first_R1",

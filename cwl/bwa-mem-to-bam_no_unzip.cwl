@@ -9,7 +9,7 @@ requirements:
 
 hints:
   - class: DockerRequirement
-    dockerPull: ACCOUNT/snv:VERSION
+    dockerPull: ACCOUNT/upstream_gatk:VERSION
 
 baseCommand: [bwa-mem-to-bam_no_unzip.sh]
 
