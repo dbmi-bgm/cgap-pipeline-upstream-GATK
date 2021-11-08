@@ -108,7 +108,8 @@ RUN git clone https://github.com/dbmi-bgm/cgap-scripts/ && \
     cd ..
 
 # bamqc
-COPY bamqc.py .
+COPY scripts/bamqc.py .
+RUN chmod +x bamqc.py
 
 # ApplyBQSR parallel
 COPY ApplyBQSR-parallel.sh .
