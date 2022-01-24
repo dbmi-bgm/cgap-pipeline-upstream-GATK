@@ -62,9 +62,9 @@ RUN wget https://github.com/lh3/bwa/archive/v0.7.17.tar.gz && \
     ln -s bwa-0.7.17 bwa
 
 # pigz
-RUN wget https://zlib.net/pigz/pigz-2.6.tar.gz && \
-    tar -xzf pigz-2.6.tar.gz && \
-    rm -rf pigz-2.6.tar.gz && \
+RUN wget https://github.com/madler/pigz/archive/refs/tags/v2.6.tar.gz && \
+    tar -xzf v2.6.tar.gz && \
+    rm -rf v2.6.tar.gz && \
     cd pigz-2.6 && \
     make && \
     cd .. && \
