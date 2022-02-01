@@ -9,7 +9,7 @@ This repository contains components for the CGAP upstream pipeline using GATK (G
   * ECR (Docker) source files, which allow for creation of public Docker images (using `docker build`) or private dynamically-generated ECR images (using [*cgap pipeline utils*](https://github.com/dbmi-bgm/cgap-pipeline-utils/) `deploy_pipeline`)
 
 The pipeline can process paired `FASTQ` files up to analysis ready `bam` files.
-For more details check the [*documentation*](https://cgap-pipeline-master.readthedocs.io/en/latest/Pipelines/Upstream/upstream_GATK/index-upstream_GATK.html "upstream pipeline GATK").
+For more details check the [*documentation*](https://cgap-pipeline-main.readthedocs.io/en/latest/Pipelines/Upstream/upstream_GATK/index-upstream_GATK.html "upstream pipeline GATK").
 
 ### Version Updates
 
