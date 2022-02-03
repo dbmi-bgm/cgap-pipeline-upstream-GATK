@@ -2,9 +2,9 @@
   "name": "WGS_upstream_gatk_proband",
   "title": "WGS Upstream GATK Proband VERSION",
   "version": "VERSION",
-  "accession": "GAPMWF34LVZP",
+  "accession": "GAPMWF34LV4V",
   "description": "WGS upstream pipeline (paired-fastqs to bam) using GATK for proband only",
-  "uuid": "2b074171-10b5-4f16-be26-8772ad15bac6",
+  "uuid": "f205655a-a725-4458-b535-8477e4b4ac4e",
   "project": "PROJECT_UUID",
   "institution": "INSTITUTION_UUID",
   "input": [
@@ -55,8 +55,8 @@
       },
       "custom_pf_fields": {
           "raw_bam": {
-              "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
+              "file_type": "raw bam",
+              "description": "aligned reads in bam format"
           }
       },
       "input": [
@@ -118,8 +118,8 @@
       },
       "custom_pf_fields": {
           "bam_w_readgroups": {
-              "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
+              "file_type": "readgroups bam",
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -177,7 +177,7 @@
       "custom_pf_fields": {
           "merged_bam": {
               "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -229,8 +229,8 @@
       },
       "custom_pf_fields": {
           "dupmarked_bam": {
-              "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
+              "file_type": "MarkDuplicates bam",
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -282,7 +282,7 @@
       "custom_pf_fields": {
           "sorted_bam": {
               "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -333,8 +333,8 @@
       },
       "custom_pf_fields": {
           "recalibration_report": {
-              "file_type": "intermediate file",
-              "description": "Intermediate report file"
+              "file_type": "recalibration table",
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -372,8 +372,9 @@
       },
       "custom_pf_fields": {
           "recalibrated_bam": {
-              "file_type": "alignments",
-              "description": "processed output from cgap upstream pipeline"
+              "file_type": "analysis-ready bam",
+              "description": "analysis-ready aligned reads in bam format",
+              "linkto_location": "Sample"
           }
       },
       "input": [

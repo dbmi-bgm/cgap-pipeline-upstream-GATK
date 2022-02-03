@@ -2,22 +2,22 @@
   "name": "WES_upstream_gatk",
   "title": "WES Upstream GATK VERSION",
   "version": "VERSION",
-  "accession": "GAPMWF8IY3B2",
+  "accession": "GAPMWF8IY32L",
   "description": "WES upstream pipeline (paired-fastqs to bam) using GATK for trio or family",
-  "uuid": "545c5ec0-c4fb-4e2f-aa0a-83bee9503249",
+  "uuid": "83772cda-ba73-4e32-ad59-9172ccede896",
   "project": "PROJECT_UUID",
   "institution": "INSTITUTION_UUID",
   "input": [
     {
-      "argument_name": "fastqs_proband_first_R1",
+      "argument_name": "fastqs_R1",
       "argument_type": "file"
     },
     {
-      "argument_name": "fastqs_proband_first_R2",
+      "argument_name": "fastqs_R2",
       "argument_type": "file"
     },
     {
-      "argument_name": "sample_names_proband_first",
+      "argument_name": "sample_names",
       "argument_type": "parameter"
     },
     {
@@ -61,8 +61,8 @@
       },
       "custom_pf_fields": {
           "raw_bam": {
-              "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
+              "file_type": "raw bam",
+              "description": "aligned reads in bam format"
           }
       },
       "input": [
@@ -70,13 +70,13 @@
           "argument_name": "fastq_R1",
           "argument_type": "file",
           "scatter": 2,
-          "source_argument_name": "fastqs_proband_first_R1"
+          "source_argument_name": "fastqs_R1"
         },
         {
           "argument_name": "fastq_R2",
           "argument_type": "file",
           "scatter": 2,
-          "source_argument_name": "fastqs_proband_first_R2"
+          "source_argument_name": "fastqs_R2"
         },
         {
           "argument_name": "reference",
@@ -111,7 +111,7 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first",
+          "source_argument_name": "sample_names",
           "scatter": 1
         }
       ]
@@ -129,8 +129,8 @@
       },
       "custom_pf_fields": {
           "bam_w_readgroups": {
-              "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
+              "file_type": "readgroups bam",
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -143,7 +143,7 @@
         {
           "argument_name": "sample_name",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first",
+          "source_argument_name": "sample_names",
           "scatter": 1
         }
       ]
@@ -174,7 +174,7 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first",
+          "source_argument_name": "sample_names",
           "scatter": 1
         }
       ]
@@ -193,7 +193,7 @@
       "custom_pf_fields": {
           "merged_bam": {
               "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -232,7 +232,7 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first",
+          "source_argument_name": "sample_names",
           "scatter": 1
         }
       ]
@@ -250,8 +250,8 @@
       },
       "custom_pf_fields": {
           "dupmarked_bam": {
-              "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
+              "file_type": "MarkDuplicates bam",
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -289,7 +289,7 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first",
+          "source_argument_name": "sample_names",
           "scatter": 1
         }
       ]
@@ -308,7 +308,7 @@
       "custom_pf_fields": {
           "sorted_bam": {
               "file_type": "intermediate file",
-              "description": "Intermediate alignment file"
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -346,7 +346,7 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first",
+          "source_argument_name": "sample_names",
           "scatter": 1
         }
       ]
@@ -364,8 +364,8 @@
       },
       "custom_pf_fields": {
           "recalibration_report": {
-              "file_type": "intermediate file",
-              "description": "Intermediate report file"
+              "file_type": "recalibration table",
+              "description": "intermediate file"
           }
       },
       "input": [
@@ -403,8 +403,9 @@
       },
       "custom_pf_fields": {
           "recalibrated_bam": {
-              "file_type": "alignments",
-              "description": "processed output from cgap upstream pipeline"
+              "file_type": "analysis-ready bam",
+              "description": "analysis-ready aligned reads in bam format",
+              "linkto_location": "Sample"
           }
       },
       "input": [
@@ -459,7 +460,7 @@
         {
           "argument_name": "sample",
           "argument_type": "parameter",
-          "source_argument_name": "sample_names_proband_first",
+          "source_argument_name": "sample_names",
           "scatter": 1
         }
       ]
