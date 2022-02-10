@@ -112,7 +112,7 @@
           "argument_name": "sample",
           "argument_type": "parameter",
           "source_argument_name": "sample_names",
-          "scatter": 1
+          "input_dimension": 1
         }
       ]
     },
@@ -144,38 +144,7 @@
           "argument_name": "sample_name",
           "argument_type": "parameter",
           "source_argument_name": "sample_names",
-          "scatter": 1
-        }
-      ]
-    },
-    {
-      "name": "cgap-bamqc-1",
-      "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
-      "config": {
-        "instance_type": "c5a.2xlarge",
-        "ebs_size": "3.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_bamqc",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_add-readgroups-check",
-          "source_argument_name": "bam_w_readgroups"
-        },
-        {
-          "argument_name": "eff_genome_size",
-          "argument_type": "parameter",
-          "source_argument_name": "eff_genome_size"
-        },
-        {
-          "argument_name": "sample",
-          "argument_type": "parameter",
-          "source_argument_name": "sample_names",
-          "scatter": 1
+          "input_dimension": 1
         }
       ]
     },
@@ -207,37 +176,6 @@
       ]
     },
     {
-      "name": "cgap-bamqc-2",
-      "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
-      "config": {
-        "instance_type": "c5a.2xlarge",
-        "ebs_size": "3.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_bamqc",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_merge-bam-check",
-          "source_argument_name": "merged_bam"
-        },
-        {
-          "argument_name": "eff_genome_size",
-          "argument_type": "parameter",
-          "source_argument_name": "eff_genome_size"
-        },
-        {
-          "argument_name": "sample",
-          "argument_type": "parameter",
-          "source_argument_name": "sample_names",
-          "scatter": 1
-        }
-      ]
-    },
-    {
       "name": "workflow_picard-MarkDuplicates-check",
       "workflow": "beb2b340-94ee-4afe-b4e3-66caaf063397",
       "config": {
@@ -264,37 +202,6 @@
       ]
     },
     {
-      "name": "cgap-bamqc-3",
-      "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
-      "config": {
-        "instance_type": "c5a.2xlarge",
-        "ebs_size": "3.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_bamqc",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_picard-MarkDuplicates-check",
-          "source_argument_name": "dupmarked_bam"
-        },
-        {
-          "argument_name": "eff_genome_size",
-          "argument_type": "parameter",
-          "source_argument_name": "eff_genome_size"
-        },
-        {
-          "argument_name": "sample",
-          "argument_type": "parameter",
-          "source_argument_name": "sample_names",
-          "scatter": 1
-        }
-      ]
-    },
-    {
       "name": "workflow_sort-bam-check",
       "workflow": "560f5194-cd3a-4799-9b1a-6a2d2c371c89",
       "config": {
@@ -317,37 +224,6 @@
           "argument_type": "file",
           "source": "workflow_picard-MarkDuplicates-check",
           "source_argument_name": "dupmarked_bam"
-        }
-      ]
-    },
-    {
-      "name": "cgap-bamqc-4",
-      "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
-      "config": {
-        "instance_type": "c5a.2xlarge",
-        "ebs_size": "3.5x",
-        "EBS_optimized": true,
-        "spot_instance": true,
-        "run_name": "run_bamqc",
-        "behavior_on_capacity_limit": "wait_and_retry"
-      },
-      "input": [
-        {
-          "argument_name": "input_bam",
-          "argument_type": "file",
-          "source": "workflow_sort-bam-check",
-          "source_argument_name": "sorted_bam"
-        },
-        {
-          "argument_name": "eff_genome_size",
-          "argument_type": "parameter",
-          "source_argument_name": "eff_genome_size"
-        },
-        {
-          "argument_name": "sample",
-          "argument_type": "parameter",
-          "source_argument_name": "sample_names",
-          "scatter": 1
         }
       ]
     },
@@ -435,7 +311,7 @@
       ]
     },
     {
-      "name": "cgap-bamqc-5",
+      "name": "cgap-bamqc-1",
       "workflow": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
       "config": {
         "instance_type": "c5a.2xlarge",
@@ -461,7 +337,7 @@
           "argument_name": "sample",
           "argument_type": "parameter",
           "source_argument_name": "sample_names",
-          "scatter": 1
+          "input_dimension": 1
         }
       ]
     }
