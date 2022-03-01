@@ -10,15 +10,18 @@
   "input": [
     {
       "argument_name": "fastqs_R1",
-      "argument_type": "file"
+      "argument_type": "file",
+      "dimensionality": 1
     },
     {
       "argument_name": "fastqs_R2",
-      "argument_type": "file"
+      "argument_type": "file",
+      "dimensionality": 1
     },
     {
       "argument_name": "sample_names",
-      "argument_type": "parameter"
+      "argument_type": "parameter",
+      "value_type": "json"
     },
     {
       "argument_name": "reference_bwa",
@@ -270,7 +273,7 @@
           "recalibrated_bam": {
               "file_type": "analysis-ready bam",
               "description": "analysis-ready aligned reads in bam format",
-              "linkto_location": "Sample"
+              "linkto_location": ["Sample"]
           }
       },
       "input": [
