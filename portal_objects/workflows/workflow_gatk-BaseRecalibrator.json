@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWF3LQBB7P",
+  "accession": "GAPWF3LQBB1P",
   "app_name": "workflow_gatk-BaseRecalibrator",
   "app_version": "VERSION",
   "arguments": [
@@ -36,29 +36,9 @@
   "cwl_main_filename": "gatk-BaseRecalibrator.cwl",
   "cwl_pointer": "",
   "description": "Run gatk BaseRecalibrator on bam input file. Produce a recalibration report",
-  "docker_image_name": "ACCOUNT/upstream_gatk:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_gatk-BaseRecalibrator_VERSION",
-  "aliases": ["cgap:workflow_gatk-BaseRecalibrator_VERSION",
-              "cgap:workflow_gatk-BaseRecalibrator_v26",
-              "cgap:workflow_gatk-BaseRecalibrator_v25",
-              "cgap:workflow_gatk-BaseRecalibrator_v24",
-              "cgap:workflow_gatk-BaseRecalibrator_v23",
-              "cgap:workflow_gatk-BaseRecalibrator_v22",
-              "cgap:workflow_gatk-BaseRecalibrator_v21",
-              "cgap:workflow_gatk-BaseRecalibrator_v20",
-              "cgap:workflow_gatk-BaseRecalibrator_v19",
-              "cgap:workflow_gatk-BaseRecalibrator_v18",
-              "cgap:workflow_gatk-BaseRecalibrator_v17",
-              "cgap:workflow_gatk-BaseRecalibrator_v16",
-              "cgap:workflow_gatk-BaseRecalibrator_v15",
-              "cgap:workflow_gatk-BaseRecalibrator_v14",
-              "cgap:workflow_gatk-BaseRecalibrator_v13",
-              "cgap:workflow_gatk-BaseRecalibrator_v12",
-              "cgap:workflow_gatk-BaseRecalibrator_v11",
-              "cgap:workflow_gatk-BaseRecalibrator_v10",
-              "cgap:workflow_gatk-BaseRecalibrator_v9"],
+  "aliases": ["cgap:workflow_gatk-BaseRecalibrator_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -147,5 +127,7 @@
       }
   ],
   "title": "Run gatk BaseRecalibrator",
-  "uuid": "455b3056-64ca-4a9b-b546-294b01c9ca92"
+  "uuid": "6efcda7d-2140-41b8-b2bb-322f61206379",
+  "previous_version": ["455b3056-64ca-4a9b-b546-294b01c9ca92"],
+  "version_upgrade_log": "Updated docker"
 }

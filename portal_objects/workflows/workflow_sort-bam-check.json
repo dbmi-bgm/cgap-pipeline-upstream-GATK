@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWFIFWUPJP",
+  "accession": "GAPWFIFWUP4P",
   "app_name": "workflow_sort-bam-check",
   "app_version": "VERSION",
   "arguments": [
@@ -43,29 +43,9 @@
   "cwl_main_filename": "workflow_sort-bam_plus_integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Sort bam input file. An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/upstream_gatk:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_sort-bam-check_VERSION",
-  "aliases": ["cgap:workflow_sort-bam-check_VERSION",
-              "cgap:workflow_sort-bam-check_v26",
-              "cgap:workflow_sort-bam-check_v25",
-              "cgap:workflow_sort-bam-check_v24",
-              "cgap:workflow_sort-bam-check_v23",
-              "cgap:workflow_sort-bam-check_v22",
-              "cgap:workflow_sort-bam-check_v21",
-              "cgap:workflow_sort-bam-check_v20",
-              "cgap:workflow_sort-bam-check_v19",
-              "cgap:workflow_sort-bam-check_v18",
-              "cgap:workflow_sort-bam-check_v17",
-              "cgap:workflow_sort-bam-check_v16",
-              "cgap:workflow_sort-bam-check_v15",
-              "cgap:workflow_sort-bam-check_v14",
-              "cgap:workflow_sort-bam-check_v13",
-              "cgap:workflow_sort-bam-check_v12",
-              "cgap:workflow_sort-bam-check_v11",
-              "cgap:workflow_sort-bam-check_v10",
-              "cgap:workflow_sort-bam-check_v9"],
+  "aliases": ["cgap:workflow_sort-bam-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -195,5 +175,7 @@
       }
   ],
   "title": "Sort bam file plus output integrity-check",
-  "uuid": "560f5194-cd3a-4799-9b1a-6a2d2c371c89"
+  "uuid": "2d5b8107-145c-47bd-b4e4-2532e76a57fe",
+  "previous_version": ["560f5194-cd3a-4799-9b1a-6a2d2c371c89"],
+  "version_upgrade_log": "Updated docker"
 }

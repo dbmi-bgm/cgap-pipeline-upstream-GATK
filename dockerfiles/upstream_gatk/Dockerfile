@@ -24,7 +24,7 @@ WORKDIR /usr/local/bin
 #     Software
 #######################################################################
 ## conda install
-RUN conda install -c bioconda -y gatk4==4.2.5.0 picard==2.20.2 \
+RUN conda install -c bioconda -y gatk4==4.2.5.0 picard==2.26.11 \
     pysam==0.18.0 && \
     conda clean -a -y -f
 

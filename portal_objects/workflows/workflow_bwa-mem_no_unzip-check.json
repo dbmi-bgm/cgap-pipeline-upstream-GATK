@@ -1,5 +1,5 @@
 {
-  "accession": "GAPPL9LF21A1",
+  "accession": "GAPPL9LF21AZ",
   "app_name": "workflow_bwa-mem_no_unzip-check",
   "app_version": "VERSION",
   "arguments": [
@@ -63,14 +63,9 @@
   "cwl_main_filename": "workflow_bwa-mem-to-bam_no_unzip_plus_integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Align paired-end reads to reference genome. Processing from fastq input files to bam output file. An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/upstream_gatk:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_bwa-mem_no_unzip-check_VERSION",
-  "aliases": ["cgap:workflow_bwa-mem_no_unzip-check_VERSION",
-              "cgap:workflow_bwa-mem_no_unzip-check_v26",
-              "cgap:workflow_bwa-mem_no_unzip-check_v25",
-              "cgap:workflow_bwa-mem_no_unzip-check_v24"],
+  "aliases": ["cgap:workflow_bwa-mem_no_unzip-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -215,7 +210,7 @@
       }
   ],
   "title": "Paired-end reads alignment to reference plus output integrity-check",
-  "uuid": "aa490a0f-e6a7-4b97-9c91-4e15b5896423",
-  "previous_version": ["50e75343-2e00-471d-a667-4acb083287d8"],
-  "version_upgrade_log": "Updated reference file for bwa, includes alt index now"
+  "uuid": "96e0a1bc-473f-43f3-b9ad-1f61c5da7475",
+  "previous_version": ["aa490a0f-e6a7-4b97-9c91-4e15b5896423"],
+  "version_upgrade_log": "Updated docker"
 }

@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWF3GVI28D",
+  "accession": "GAPWF3GVI282",
   "app_name": "workflow_merge-bam-check",
   "app_version": "VERSION",
   "arguments": [
@@ -31,28 +31,9 @@
   "cwl_main_filename": "workflow_merge-bam_plus_integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Merge bam input files. An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/upstream_gatk:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_merge-bam-check_VERSION",
-  "aliases": ["cgap:workflow_merge-bam-check_VERSION",
-              "cgap:workflow_merge-bam-check_v26",
-              "cgap:workflow_merge-bam-check_v25",
-              "cgap:workflow_merge-bam-check_v24",
-              "cgap:workflow_merge-bam-check_v23",
-              "cgap:workflow_merge-bam-check_v22",
-              "cgap:workflow_merge-bam-check_v21",
-              "cgap:workflow_merge-bam-check_v20",
-              "cgap:workflow_merge-bam-check_v19",
-              "cgap:workflow_merge-bam-check_v18",
-              "cgap:workflow_merge-bam-check_v17",
-              "cgap:workflow_merge-bam-check_v16",
-              "cgap:workflow_merge-bam-check_v15",
-              "cgap:workflow_merge-bam-check_v14",
-              "cgap:workflow_merge-bam-check_v13",
-              "cgap:workflow_merge-bam-check_v12",
-              "cgap:workflow_merge-bam-check_v11",
-              "cgap:workflow_merge-bam-check_v10"],
+  "aliases": ["cgap:workflow_merge-bam-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -156,7 +137,7 @@
       }
   ],
   "title": "Merge bam files plus output integrity-check",
-  "uuid": "4853a03a-8c0c-4624-a45d-c5206a72907b",
-  "previous_version": ["30802d8c-20c3-4eea-82dd-dd34621569c6"],
-  "version_upgrade_log": "Multithreading"
+  "uuid": "d77d1c53-c524-4689-bb21-d1e5f805f83e",
+  "previous_version": ["4853a03a-8c0c-4624-a45d-c5206a72907b"],
+  "version_upgrade_log": "Updated docker"
 }
