@@ -16,6 +16,7 @@ For more details check the [*documentation*](https://cgap-pipeline-main.readthed
 #### v1.0.0
 * v27 -> v1.0.0, we are starting a new more comprehensive versioning system
 * Added some change in metaworkflows to accomodate the changes in foursight
+* Updated GATK version to fix vulnerability
 
 #### v27
 * This repo starts from the v26 release of [*cgap-pipeline*](https://github.com/dbmi-bgm/cgap-pipeline) and contains the first half of the original pipeline (starting from `fastq` files and producing `bam` files)

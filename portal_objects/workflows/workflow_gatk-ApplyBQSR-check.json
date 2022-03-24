@@ -172,7 +172,7 @@
                   "Run gatk ApplyBQSR"
               ],
               "software_used": [
-                 "/softwares/4ae88fb4-23f2-4939-8852-4644069d14d9",
+                 "/softwares/7b86efcc-60c4-442b-b803-eeccc63ff175",
                  "/softwares/3d60553d-5b48-44eb-94f6-00f3355cfe02"
               ]
           },

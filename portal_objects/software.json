@@ -30,9 +30,9 @@
             "variant caller"
         ],
         "source_url": "https://software.broadinstitute.org/gatk/gatk4",
-        "title": "gatk_4.1.2.0",
-        "uuid": "4ae88fb4-23f2-4939-8852-4644069d14d9",
-        "version": "4.1.2.0"
+        "title": "gatk_4.2.5.0",
+        "uuid": "7b86efcc-60c4-442b-b803-eeccc63ff175",
+        "version": "4.2.5.0"
     },
     {
         "project": "PROJECT_UUID",
@@ -57,18 +57,6 @@
         "title": "add-readgroups_28520db",
         "uuid": "7d1ab137-fa88-4649-8d22-349686f5bbba",
         "commit": "28520db"
-    },
-    {
-        "project": "PROJECT_UUID",
-        "institution": "INSTITUTION_UUID",
-        "name": "pigz",
-        "software_type": [
-            "compressor"
-        ],
-        "source_url": "https://zlib.net/pigz/",
-        "title": "pigz_pigz-2.6",
-        "uuid": "c730b361-1b4d-4d29-8eff-8f7576d776e2",
-        "version": "2.6"
     },
     {
         "project": "PROJECT_UUID",
