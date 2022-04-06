@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWFF87W4S1",
+  "accession": "GAPWFF87W4SA",
   "app_name": "workflow_gatk-ApplyBQSR-check",
   "app_version": "VERSION",
   "arguments": [
@@ -62,13 +62,9 @@
   "cwl_main_filename": "workflow_gatk-ApplyBQSR_plus_integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Run gatk ApplyBQSR on bam input file. Produce a recalibrated bam file. An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/upstream_gatk:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_gatk-ApplyBQSR-check_VERSION",
-  "aliases": ["cgap:workflow_gatk-ApplyBQSR-check_VERSION",
-              "cgap:workflow_gatk-ApplyBQSR-check_v26",
-              "cgap:workflow_gatk-ApplyBQSR-check_v25"],
+  "aliases": ["cgap:workflow_gatk-ApplyBQSR-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -172,7 +168,7 @@
                   "Run gatk ApplyBQSR"
               ],
               "software_used": [
-                 "/softwares/4ae88fb4-23f2-4939-8852-4644069d14d9",
+                 "/softwares/7b86efcc-60c4-442b-b803-eeccc63ff175",
                  "/softwares/3d60553d-5b48-44eb-94f6-00f3355cfe02"
               ]
           },
@@ -253,7 +249,7 @@
       }
   ],
   "title": "Run gatk ApplyBQSR plus output integrity-check",
-  "uuid": "c4d9ce59-7ff3-44c8-8336-f46774a4d882",
-  "previous_version": ["6c9c6f49-f954-4e76-8dfb-d385cddcebd6"],
-  "version_upgrade_log": "ApplyBQSR runs in parallel now"
+  "uuid": "069a08b5-faec-4de5-8142-0a16be84780f",
+  "previous_version": ["c4d9ce59-7ff3-44c8-8336-f46774a4d882"],
+  "version_upgrade_log": "Updated docker"
 }

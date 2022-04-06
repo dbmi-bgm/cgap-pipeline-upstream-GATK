@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWFLNQ7XTG",
+  "accession": "GAPWFLNQ7XT8",
   "app_name": "workflow_picard-MarkDuplicates-check",
   "app_version": "VERSION",
   "arguments": [
@@ -56,29 +56,9 @@
   "cwl_main_filename": "workflow_picard-MarkDuplicates_plus_integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Mark duplicates in bam input file. An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/upstream_gatk:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_picard-MarkDuplicates-check_VERSION",
-  "aliases": ["cgap:workflow_picard-MarkDuplicates-check_VERSION",
-              "cgap:workflow_picard-MarkDuplicates-check_v26",
-              "cgap:workflow_picard-MarkDuplicates-check_v25",
-              "cgap:workflow_picard-MarkDuplicates-check_v24",
-              "cgap:workflow_picard-MarkDuplicates-check_v23",
-              "cgap:workflow_picard-MarkDuplicates-check_v22",
-              "cgap:workflow_picard-MarkDuplicates-check_v21",
-              "cgap:workflow_picard-MarkDuplicates-check_v20",
-              "cgap:workflow_picard-MarkDuplicates-check_v19",
-              "cgap:workflow_picard-MarkDuplicates-check_v18",
-              "cgap:workflow_picard-MarkDuplicates-check_v17",
-              "cgap:workflow_picard-MarkDuplicates-check_v16",
-              "cgap:workflow_picard-MarkDuplicates-check_v15",
-              "cgap:workflow_picard-MarkDuplicates-check_v14",
-              "cgap:workflow_picard-MarkDuplicates-check_v13",
-              "cgap:workflow_picard-MarkDuplicates-check_v12",
-              "cgap:workflow_picard-MarkDuplicates-check_v11",
-              "cgap:workflow_picard-MarkDuplicates-check_v10",
-              "cgap:workflow_picard-MarkDuplicates-check_v9"],
+  "aliases": ["cgap:workflow_picard-MarkDuplicates-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -154,7 +134,7 @@
                   "Mark duplicates in bam input file"
               ],
               "software_used": [
-                 "/softwares/586cef39-6505-4bf6-920a-4b26a500d210"
+                 "/softwares/0c17c344-5949-4fe9-a494-8283724152c1"
               ]
           },
           "name": "MarkDuplicates",
@@ -248,5 +228,7 @@
       }
   ],
   "title": "Mark duplicates plus output integrity-check",
-  "uuid": "beb2b340-94ee-4afe-b4e3-66caaf063397"
+  "uuid": "fab66ee1-f08c-47bd-9d08-0b9a3e8609db",
+  "previous_version": ["beb2b340-94ee-4afe-b4e3-66caaf063397"],
+  "version_upgrade_log": "Updated docker"
 }

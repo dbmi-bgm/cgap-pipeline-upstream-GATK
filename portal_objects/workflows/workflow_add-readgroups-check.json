@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWFB2ELK89",
+  "accession": "GAPWFB2ELK8L",
   "app_name": "workflow_add-readgroups-check",
   "app_version": "VERSION",
   "arguments": [
@@ -43,24 +43,9 @@
   "cwl_main_filename": "workflow_add-readgroups_plus_integrity-check.cwl",
   "cwl_pointer": "",
   "description": "Add read groups to bam input file. An integrity check is performed on the output file",
-  "docker_image_name": "ACCOUNT/upstream_gatk:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "workflow_add-readgroups-check_VERSION",
-  "aliases": ["cgap:workflow_add-readgroups-check_VERSION",
-              "cgap:workflow_add-readgroups-check_v26",
-              "cgap:workflow_add-readgroups-check_v25",
-              "cgap:workflow_add-readgroups-check_v24",
-              "cgap:workflow_add-readgroups-check_v23",
-              "cgap:workflow_add-readgroups-check_v22",
-              "cgap:workflow_add-readgroups-check_v21",
-              "cgap:workflow_add-readgroups-check_v20",
-              "cgap:workflow_add-readgroups-check_v19",
-              "cgap:workflow_add-readgroups-check_v18",
-              "cgap:workflow_add-readgroups-check_v17",
-              "cgap:workflow_add-readgroups-check_v16",
-              "cgap:workflow_add-readgroups-check_v15",
-              "cgap:workflow_add-readgroups-check_v14"],
+  "aliases": ["cgap:workflow_add-readgroups-check_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -190,7 +175,7 @@
       }
   ],
   "title": "Add read groups plus output integrity-check",
-  "previous_version": ["6ea6bf43-76c2-4616-8dd6-dd60d72a2bf2"],
-  "uuid": "d554d59b-e709-4c35-a81f-68a0cb3dd38a",
-  "version_upgrade_log": "Fixed issue with EOF, now the script add the 28 bytes that are expected as EOF by samtools."
+  "previous_version": ["d554d59b-e709-4c35-a81f-68a0cb3dd38a"],
+  "uuid": "e187247b-d7f1-405b-b2a3-7a99fec06554",
+  "version_upgrade_log": "Updated docker"
 }

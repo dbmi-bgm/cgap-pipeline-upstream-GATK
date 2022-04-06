@@ -1,5 +1,5 @@
 {
-  "accession": "GAPWF2R5LG4P",
+  "accession": "GAPWF2R5LG41",
   "app_name": "cgap-bamqc",
   "app_version": "VERSION",
   "arguments": [
@@ -38,16 +38,9 @@
   "cwl_main_filename": "bamqc.cwl",
   "cwl_pointer": "",
   "description": "Run minimal bamqc on a bam input file. Produce a json report for quality metrics",
-  "docker_image_name": "ACCOUNT/upstream_gatk:VERSION",
-  "docker_registry_url": "https://console.aws.amazon.com/ecr/repositories/",
   "institution": "INSTITUTION_UUID",
   "name": "bamqc_VERSION",
-  "aliases": ["cgap:bamqc_VERSION",
-              "cgap:bamqc_v26",
-              "cgap:bamqc_v25",
-              "cgap:bamqc_v24",
-              "cgap:bamqc_v23",
-              "cgap:bamqc_v22"],
+  "aliases": ["cgap:bamqc_VERSION"],
   "steps": [
       {
           "inputs": [
@@ -132,7 +125,7 @@
       }
   ],
   "title": "Run Minimal BAMQC",
-  "uuid": "9ff0c046-9352-4ec4-9a34-bf3f547bde61",
-  "previous_version": ["d6651132-ab7c-40c0-886f-94f88ef6bdce"],
-  "version_upgrade_log": "Moved qc v5 to pipeline v22"
+  "uuid": "943d51c2-1c44-4536-b65d-aa750d5c51d1",
+  "previous_version": ["9ff0c046-9352-4ec4-9a34-bf3f547bde61"],
+  "version_upgrade_log": "Updated docker"
 }
