@@ -1,0 +1,43 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: bamqc
+description: Run minimal quality control on input BAM file. |
+             Produce a JSON report for quality metrics.
+
+runner:
+  language: cwl
+  main: bamqc.cwl
+
+software:
+  - samtools@1.9
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_bam:
+    argument_type: file.bam
+
+  # Parameter argument
+  nthreads:
+    argument_type: parameter.integer
+
+  sample:
+    argument_type: parameter.json
+
+  eff_genome_size:
+    argument_type: parameter.integer
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # QC output
+  qc_json:
+    argument_type: qc.quality_metric_bamqc
+    argument_to_be_attached_to: input_bam
+    json: True
