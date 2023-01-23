@@ -1,0 +1,55 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: bwa-mem_no_unzip-check
+description: Align paired-end reads to reference genome using bwa-mem algorithm. |
+             Processing from paired input FASTQ files to raw BAM output file. |
+             An integrity check is performed on the output file.
+
+runner:
+  language: cwl
+  main: workflow_bwa-mem-to-bam_no_unzip_plus_integrity-check.cwl
+  child:
+    - bwa-mem-to-bam_no_unzip.cwl
+    - integrity-check.cwl
+
+software:
+  - bwa@0.7.17
+  - samtools@1.9
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  fastq_R1:
+    argument_type: file.fastq
+
+  fastq_R2:
+    argument_type: file.fastq
+
+  reference:
+    argument_type: file.bwt
+
+  # Parameter argument
+  nthreads:
+    argument_type: parameter.integer
+
+  count:
+    argument_type: parameter.integer
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  raw_bam:
+    argument_type: file.bam
+
+  # QC output
+  raw_bam-check:
+    argument_type: qc.quality_metric_bamcheck
+    argument_to_be_attached_to: raw_bam
+    table: True

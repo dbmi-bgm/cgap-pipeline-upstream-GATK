@@ -1,0 +1,40 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: gatk-BaseRecalibrator
+description: Run GATK BaseRecalibrator on input BAM file. |
+             Produce a recalibration report.
+
+runner:
+  language: cwl
+  main: gatk-BaseRecalibrator.cwl
+
+software:
+  - GATK@4.2.6.1
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_bam:
+    argument_type: file.bam
+
+  reference:
+    argument_type: file.fa
+
+  known-sites-snp:
+    argument_type: file.vcf_gz
+
+  known-sites-indels:
+    argument_type: file.vcf
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  recalibration_report:
+    argument_type: file.txt

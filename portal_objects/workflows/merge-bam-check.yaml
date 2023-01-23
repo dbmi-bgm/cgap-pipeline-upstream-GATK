@@ -1,0 +1,40 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: merge-bam-check
+description: Merge input BAM files. |
+             An integrity check is performed on the output file.
+
+runner:
+  language: cwl
+  main: workflow_merge-bam_plus_integrity-check.cwl
+  child:
+    - merge-bam.cwl
+    - integrity-check.cwl
+
+software:
+  - samtools@1.9
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_bams:
+    argument_type: file.bam
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  merged_bam:
+    argument_type: file.bam
+
+  # QC output
+  merged_bam-check:
+    argument_type: qc.quality_metric_bamcheck
+    argument_to_be_attached_to: merged_bam
+    table: True

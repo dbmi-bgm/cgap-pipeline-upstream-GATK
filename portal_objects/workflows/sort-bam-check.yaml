@@ -1,0 +1,50 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: sort-bam-check
+description: Sort input BAM file. |
+             An integrity check is performed on the output file.
+
+runner:
+  language: cwl
+  main: workflow_sort-bam_plus_integrity-check.cwl
+  child:
+    - sort-bam.cwl
+    - integrity-check.cwl
+
+software:
+  - samtools@1.9
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_bam:
+    argument_type: file.bam
+
+  # Parameter argument
+  max_memory:
+    argument_type: parameter.string
+
+  nthreads:
+    argument_type: parameter.integer
+
+  count:
+    argument_type: parameter.integer
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  sorted_bam:
+    argument_type: file.bam
+
+  # QC output
+  sorted_bam-check:
+    argument_type: qc.quality_metric_bamcheck
+    argument_to_be_attached_to: sorted_bam
+    table: True

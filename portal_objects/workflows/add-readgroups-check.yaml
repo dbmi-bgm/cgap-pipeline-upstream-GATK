@@ -1,0 +1,51 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: add-readgroups-check
+description: Add read groups to input BAM file. |
+             An integrity check is performed on the output file.
+
+runner:
+  language: cwl
+  main: workflow_add-readgroups_plus_integrity-check.cwl
+  child:
+    - add-readgroups.cwl
+    - integrity-check.cwl
+
+software:
+  - AddReadGroups@28520db
+  - samtools@1.9
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_bam:
+    argument_type: file.bam
+
+  # Parameter argument
+  sample_name:
+    argument_type: parameter.json
+
+  nthreads:
+    argument_type: parameter.integer
+
+  count:
+    argument_type: parameter.integer
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  bam_w_readgroups:
+    argument_type: file.bam
+
+  # QC output
+  bam_w_readgroups-check:
+    argument_type: qc.quality_metric_bamcheck
+    argument_to_be_attached_to: bam_w_readgroups
+    table: True

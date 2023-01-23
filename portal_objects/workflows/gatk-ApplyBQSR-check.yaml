@@ -1,0 +1,67 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: gatk-ApplyBQSR-check
+description: Run GATK ApplyBQSR on input BAM file. |
+             Produce a recalibrated BAM file. |
+             An integrity check is performed on the output file.
+
+runner:
+  language: cwl
+  main: workflow_gatk-ApplyBQSR_plus_integrity-check.cwl
+  child:
+    - gatk-ApplyBQSR.cwl
+    - integrity-check.cwl
+
+software:
+  - GATK@4.2.6.1
+  - split_bam@28520db
+  - samtools@1.9
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_bam:
+    argument_type: file.bam
+
+  reference:
+    argument_type: file.fa
+
+  recalibration_report:
+    argument_type: file.txt
+
+  # Parameter argument
+  static-quantized-quals_1:
+    argument_type: parameter.integer
+
+  static-quantized-quals_2:
+    argument_type: parameter.integer
+
+  static-quantized-quals_3:
+    argument_type: parameter.integer
+
+  nthreads:
+    argument_type: parameter.integer
+
+  count:
+    argument_type: parameter.integer
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  recalibrated_bam:
+    argument_type: file.bam
+    secondary_files:
+      - bai
+
+  # QC output
+  recalibrated_bam-check:
+    argument_type: qc.quality_metric_bamcheck
+    argument_to_be_attached_to: recalibrated_bam
+    table: True

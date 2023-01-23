@@ -1,0 +1,60 @@
+## Workflow information #####################################
+#     General information for the workflow
+#############################################################
+name: picard-MarkDuplicates-check
+description: Mark duplicates in input BAM file. |
+             An integrity check is performed on the output file.
+
+runner:
+  language: cwl
+  main: workflow_picard-MarkDuplicates_plus_integrity-check.cwl
+  child:
+    - picard-MarkDuplicates.cwl
+    - integrity-check.cwl
+
+software:
+  - Picard@2.26.11
+  - samtools@1.9
+
+## Input information ########################################
+#     Input files and parameters
+#############################################################
+input:
+
+  # File argument
+  input_bam:
+    argument_type: file.bam
+
+  # Parameter argument
+  xmx:
+    argument_type: parameter.string
+
+  xms:
+    argument_type: parameter.string
+
+  max_records_in_ram:
+    argument_type: parameter.integer
+
+  duplicate_pixel_distance:
+    argument_type: parameter.integer
+
+  count:
+    argument_type: parameter.integer
+
+## Output information #######################################
+#     Output files and quality controls
+#############################################################
+output:
+
+  # File output
+  dupmarked_bam:
+    argument_type: file.bam
+
+  duplicate_metrics:
+    argument_type: file.txt
+
+  # QC output
+  dupmarked_bam-check:
+    argument_type: qc.quality_metric_bamcheck
+    argument_to_be_attached_to: dupmarked_bam
+    table: True
