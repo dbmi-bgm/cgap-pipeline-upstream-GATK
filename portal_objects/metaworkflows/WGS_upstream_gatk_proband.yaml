@@ -83,6 +83,7 @@ workflows:
       raw_bam:
         file_type: raw BAM
         description: output from bwa-mem in BAM format
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -155,6 +156,7 @@ workflows:
       bam_w_readgroups:
         file_type: intermediate BAM
         description: output from AddReadGroups in BAM format
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -191,6 +193,7 @@ workflows:
       merged_bam:
         file_type: intermediate BAM
         description: output from merging step in BAM format
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -226,6 +229,7 @@ workflows:
       dupmarked_bam:
         file_type: intermediate BAM
         description: output from MarkDuplicates in BAM format
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -261,6 +265,7 @@ workflows:
       sorted_bam:
         file_type: intermediate BAM
         description: output from sorting step in BAM format
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -306,6 +311,7 @@ workflows:
       recalibration_report:
         file_type: recalibration table
         description: output from BaseRecalibrator in TXT format
+        s3_lifecycle_category: no_storage
 
     ## EC2 Configuration to use ########
     ####################################
@@ -356,6 +362,7 @@ workflows:
         description: output from ApplyBQSR in BAM format
         linkto_location:
           - Sample
+        s3_lifecycle_category: long_term_access_long_term_archive
 
     ## EC2 Configuration to use ########
     ####################################
